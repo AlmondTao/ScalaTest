@@ -51,7 +51,7 @@ object ListMethodTest {
     println("product: "+ list4.product)
 
     //集合简化规约
-    println("reduce: "+list1.reduce(_+_))
+    println("reduce: "+list4.reduce(_-_))
 
     //简化规约左
     println("reduceLeft: "+list1.reduceLeft("("+_+"-"+_+")"))
