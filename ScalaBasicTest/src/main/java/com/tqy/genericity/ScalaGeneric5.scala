@@ -13,7 +13,7 @@ object ScalaGeneric5 {
       override def compare(x: Person, y: Person): Int = x.age-x.age
     }
 
-    val greaterPerson1 = new CompareCommon1[Person](person1, person2).getGreater()
+    val greaterPerson1 = new CompareCommon1(person1, person2).getGreater()
     println(greaterPerson1)
 
     val greaterPerson2 = new CompareCommon2[Person](person1, person2).getGreater

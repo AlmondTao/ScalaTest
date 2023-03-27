@@ -1,5 +1,8 @@
 package com.tqy.collectionMethod
 
+import scala.collection.mutable
+import scala.collection.mutable.ListBuffer
+
 object ListMethodTest {
 
   def main(args: Array[String]): Unit = {
@@ -61,8 +64,16 @@ object ListMethodTest {
 
     //集合折叠
     println("fold: "+list1.fold("1")(_+_))
+
+    val list5: ListBuffer[String] = mutable.ListBuffer("a", "b", "c")
+
     //集合折叠左
-    println("foldLeft: "+list1.foldLeft("foldLeft")(_+_))
+    println("foldLeft: "+list1.foldLeft(list5)(
+      (x:ListBuffer[String],y:String)=>{
+        val x2: ListBuffer[String] = x.map(_ + y)
+        x2
+
+      }))
     //集合折叠右
     println("foldRight: "+list1.foldRight("foldRight")(_+_))
 

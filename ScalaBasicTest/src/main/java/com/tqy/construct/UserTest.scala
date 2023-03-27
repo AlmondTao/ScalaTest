@@ -10,6 +10,8 @@ object UserTest {
     println("--------------")
     lazy val u3 = User
 
+    val p: Person = Person()
+
     u1.setUserage(16)
 
   }

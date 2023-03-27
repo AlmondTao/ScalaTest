@@ -23,7 +23,7 @@ object Person{
   def sayHello(): Unit ={
     println("hello object Person")
   }
-  def apply() {
+  def apply():Person = {
     println("person apply函数")
     new Person()
   }
